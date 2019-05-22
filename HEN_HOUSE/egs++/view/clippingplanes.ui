@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <comment>
+###############################################################################
+#
+#  EGSnrc egs++ geometry viewer clipping planes user interface
+#  Copyright (C) 2015 National Research Council Canada
+#
+#  This file is part of EGSnrc.
+#
+#  EGSnrc is free software: you can redistribute it and/or modify it under
+#  the terms of the GNU Affero General Public License as published by the
+#  Free Software Foundation, either version 3 of the License, or (at your
+#  option) any later version.
+#
+#  EGSnrc is distributed in the hope that it will be useful, but WITHOUT ANY
+#  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+#  FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for
+#  more details.
+#
+#  You should have received a copy of the GNU Affero General Public License
+#  along with EGSnrc. If not, see http://www.gnu.org/licenses/.
+#
+###############################################################################
+#
+#  Author:          Iwan Kawrakow, 2005
+#
+#  Contributors:    Ernesto Mainegra-Hing
+#
+###############################################################################
+</comment>
+ <class>ClippingPlanesWidget</class>
+ <widget class="QWidget" name="ClippingPlanesWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>304</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form1</string>
+  </property>
+  <layout class="QVBoxLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
+   <item>
+    <widget class="QGroupBox" name="groupBox1">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>300</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Clipping planes</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <property name="leftMargin">
+       <number>9</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Normal vector and distance from origin</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="planeTable">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>270</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
+        <property name="columnCount">
+         <number>5</number>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>71</number>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>12</number>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column>
+         <property name="text">
+          <string>ax</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ay</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>az</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+        <item row="0" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="1" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="2" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="3" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="4" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="5" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="6" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="7" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="8" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+        <item row="9" column="4">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="background">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>186</red>
+            <green>189</green>
+            <blue>182</blue>
+           </color>
+          </brush>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+         <property name="flags">
+          <set>ItemIsUserCheckable|ItemIsEnabled</set>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <includes>
+  <include location="local">egs_vector.h</include>
+ </includes>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>planeTable</sender>
+   <signal>cellChanged(int, int)</signal>
+   <receiver>ClippingPlanesWidget</receiver>
+   <slot>applyClipping()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

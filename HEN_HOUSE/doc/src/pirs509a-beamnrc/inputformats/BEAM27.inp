@@ -1,0 +1,74 @@
+\begin{verbatim}
+        Electron-step algorithm=
+                         PRESTA-II (the default), the name is
+                         used for historical reasons
+                         or PRESTA-I
+                         Determines the algorithm used to take into account
+                         lateral and longitudinal correlations in a
+                         condensed history step.
+                         [ transport_algorithm ]
+        Spin effects=    Off, On, (default is On)
+                         Turns off/on spin effects for electron elastic
+                         scattering. Spin On is ABSOLUTELY necessary for
+                         good back-scattering calculations. Will make a
+                         difference even in `well conditioned' situations
+                         (e.g. depth dose curves for RTP energy range
+                         electrons).
+                         [ spin_effects ]
+        Brems angular sampling= Simple, KM, (default is KM)
+                         If Simple, use only the leading term of the Koch-Motz
+                         distribution to determine the emission angle of
+                         bremsstrahlung photons. If KM, complete
+                         modified Koch-Motz 2BS is used (modifications
+                         concern proper handling of kinematics at low
+                         energies, makes 2BS almost the same as 2BN at low
+                         energies).
+                         [ IBRDST ]
+        Brems cross sections= BH, NIST, NRC, default is BH
+                         If BH is selected, the Bethe-Heitler bremsstrahlung
+                         cross sections (Coulomb corrected above 50 MeV)
+                         will be used. If NIST is selected, the NIST brems
+                         cross section data base (which is the basis for
+                         the ICRU radiative stopping powers) will be employed.
+                         Differences are negligible for E > ,say, 10 MeV,
+                         but significant in the keV energy range.  If NRC is
+                         selected, NIST data including corrections for
+                         electron-electron brems will be used (typically only
+                         significant for low values of the atomic number Z
+                         and for k/T < 0.005).
+        Triplet production= On or Off (default).  Turns on/off simulation
+                         of triplet production.  If On, then Borsellino's
+                         first Born approximation is used to sample triplet
+                         events based on the triplet cross-section data.
+                         [ itriplet ]
+        Bound Compton scattering=  On, Off, Simple or norej (default)
+                         If Off, Compton scattering will be treated with
+                         Klein-Nishina, with On Compton scattering is
+                         treated in the Impulse approximation.
+                         With Simple, the impulse approximation incoherent
+                         scattering function will be used (i.e., no Doppler
+                         broadening). With norej the actual total bound
+                         Compton cross section is used and there are no
+                         rejections at run time.
+                         Make sure to use for low energy applications,
+                         not necessary above, say, 1 MeV.
+                         [ IBCMP ]
+        Compton cross sections= Bound Compton cross-section data.  User-
+                         supplied bound Compton cross-sections in the file
+                         $HEN_HOUSE/data/comp_xsections_compton.data, where
+                         comp_xsections is the name supplied for this input.
+                         This is only used if Bound Compton scattering= Simple
+                         and is not available on a region-by-region basis
+                         (see below).  The default file (ie in the absence
+                         of any user-supplied data) is compton_sigma.data.
+                         [ comp_xsections ]
+        Radiative Compton corrections= On or Off (default). If on, then
+                         include radiative corrections for Compton scattering.
+                         Equations are based on original Brown & Feynman
+                         equations (Phys. Rev. 85, p 231--1952).  Requires
+                         a change to the user codes Makefile to include
+                         $(EGS_SOURCEDIR)rad_compton1.mortran in the
+                         SOURCES (just before
+                         $(EGS_SOURCEDIR)get_inputs.mortran).
+                         [ radc_flag ]
+\end{verbatim}

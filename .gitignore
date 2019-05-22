@@ -1,0 +1,56 @@
+### ignore EGSnrc configuration generated files
+egs_home/
+egsnrc_mp/
+mortjob.mortran
+*.mortlst
+*.lst
+*.log
+HEN_HOUSE/bin/
+HEN_HOUSE/lib/
+HEN_HOUSE/log/
+HEN_HOUSE/distribution/
+HEN_HOUSE/egs++/dso/
+HEN_HOUSE/mortran3/mortran3_*.f
+HEN_HOUSE/omega/beamnrc/tools/beam_build_*.f
+HEN_HOUSE/omega/progs/addphsp/addphsp_*.f
+HEN_HOUSE/omega/progs/beamdp/beamdp_*.f
+HEN_HOUSE/omega/progs/ctcreate/ctcreate_*.F
+HEN_HOUSE/omega/progs/readphsp/readphsp_*.f
+HEN_HOUSE/omega/progs/statdose/statdose_*.f
+HEN_HOUSE/pegs4/pegs4_*.f
+HEN_HOUSE/pieces/linux/egs_gui_*
+HEN_HOUSE/pieces/linux/egs_inprz_*
+HEN_HOUSE/pieces/linux/egs_view_*
+
+
+### ignore generated documentation
+doc/*.pdf
+doc/src/*.pdf
+html
+
+### ignore binary archive files
+*.zip
+*.gz
+*.tar
+
+### ignore compiled source
+*.dll
+*.exe
+*.o
+*.so
+
+### ignore QT build folders
+
+.obj/
+.moc/
+.ui/
+
+### ignore OS generated files
+*~
+._*
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
